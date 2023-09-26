@@ -8,6 +8,7 @@ import HeroSection from "./components/heroSection/HeroSection";
 import Navbar from "./components/navbar/Navbar";
 import PricingSection from "./components/pricing/PricingSection";
 import BlogHero from "./components/blog/blogHero/BlogHero";
+import ToDoList from "./toDoList/ToDoList";
 
 function App() {
   return (
@@ -22,11 +23,13 @@ function App() {
       </LandinngPage> */}
 
       {/* blog  */}
-      <Blog>
+      {/* <Blog>
         <Navbar />
         <BlogHero />
         <Footer />
-      </Blog>
+      </Blog> */}
+
+      <ToDoList />
     </div>
   );
 }

@@ -22,7 +22,7 @@ const posts = [
     title: "The Future of Mobile App Development learn in ulearna",
     description:
       "You will thought by the world best developers of mobile app development and web development ",
-    author: "John Smith",
+    author: "Obaidullah",
     date: "1 April 2023",
     avatar: "https://randomuser.me/api/portraits/men/32.jpg",
     poster:
@@ -33,7 +33,7 @@ const posts = [
     title: "How to Launch a Successful Startup",
     description:
       "Learn the essential steps to launch a successful startup and make your dreams a reality.",
-    author: "Sarah Brown",
+    author: "Sarah Khalili",
     date: "28 March 2023",
     avatar: "https://randomuser.me/api/portraits/women/44.jpg",
     poster:
@@ -44,7 +44,7 @@ const posts = [
     title: "The Benefits of Mindfulness Meditation",
     description:
       "Discover the scientifically proven benefits of mindfulness meditation and how it can improve your health and wellbeing.",
-    author: "David Kim",
+    author: "Abdul Majid",
     date: "25 March 2023",
     avatar: "https://randomuser.me/api/portraits/men/46.jpg",
     poster:
@@ -55,7 +55,7 @@ const posts = [
     title: "Why Learning a Second Language is Important",
     description:
       "Explore the benefits of learning a second language and how it can improve your cognitive abilities.",
-    author: "Maria Rodriguez",
+    author: "Zakir khan",
     date: "22 March 2023",
     avatar: "https://randomuser.me/api/portraits/men/97.jpg",
     poster:
@@ -66,7 +66,7 @@ const posts = [
     title: "The Best Places to Visit in Europe",
     description:
       "Discover the top destinations in Europe and plan your dream vacation.",
-    author: "Alex Johnson",
+    author: "Zabi jan",
     date: "19 March 2023",
     avatar: "https://randomuser.me/api/portraits/men/99.jpg",
     poster:
@@ -77,7 +77,7 @@ const posts = [
     title: "How to Make the Perfect Cup of Coffee",
     description:
       "Learn the secrets to making the perfect cup of coffee and impress your friends and family.",
-    author: "Thomas Lee",
+    author: "Khalil jan",
     date: "16 March 2023",
     avatar: "https://randomuser.me/api/portraits/women/63.jpg",
     poster:
@@ -88,7 +88,7 @@ const posts = [
     title: "The Latest Fashion Trends for Spring 2023",
     description:
       "Discover the hottest fashion trends for the upcoming spring season and stay ahead of the curve.",
-    author: "Jessica Kim",
+    author: "Rahimi",
     date: "13 March 2023",
     avatar: "https://randomuser.me/api/portraits/women/47.jpg",
     poster:
@@ -99,7 +99,7 @@ const posts = [
     title: "The Benefits of Yoga for Athletes",
     description:
       "Learn how practicing yoga can improve your athletic performance and prevent injuries.",
-    author: "Michael Johnson",
+    author: "Abdullah",
     date: "10 March 2023",
     avatar: "https://randomuser.me/api/portraits/men/86.jpg",
     poster:
@@ -120,7 +120,6 @@ function BlogHero() {
         </div>
         <BlogNavbar />
         <BlogCards posts={posts} />
-        {/* posts */}
         <BlogNavigationBtn />
       </div>
     </div>
