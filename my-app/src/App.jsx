@@ -9,6 +9,7 @@ import Navbar from "./components/navbar/Navbar";
 import PricingSection from "./components/pricing/PricingSection";
 import BlogHero from "./components/blog/blogHero/BlogHero";
 import ToDoList from "./toDoList/ToDoList";
+import RatingStars from "./assets/ratingStars/RatingStars";
 
 function App() {
   return (
@@ -29,7 +30,8 @@ function App() {
         <Footer />
       </Blog> */}
 
-      <ToDoList />
+      {/* <ToDoList /> */}
+      <RatingStars maxLength={10} />
     </div>
   );
 }

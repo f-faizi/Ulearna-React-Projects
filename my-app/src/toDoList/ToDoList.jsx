@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 function ToDoList() {
   const [value, setValue] = useState([]);
+
   return (
     <div>
       <form action="">
@@ -12,7 +13,9 @@ function ToDoList() {
           className="border-2"
           onChange={(e) => setValue(e.target.value)}
         />
+        <button>Add</button>
       </form>
+      <div></div>
     </div>
   );
 }
