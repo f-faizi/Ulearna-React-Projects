@@ -9,8 +9,9 @@ import Navbar from "./components/navbar/Navbar";
 import PricingSection from "./components/pricing/PricingSection";
 import BlogHero from "./components/blog/blogHero/BlogHero";
 import ToDoList from "./toDoList/ToDoList";
-import RatingStars from "./assets/ratingStars/RatingStars";
+import RatingStars from "./components/ratingStars/RatingStars";
 import { useState } from "react";
+import ShowMore from "./components/showMore/ShowMore";
 
 function App() {
   const [movieRating, setMovieRating] = useState(null);
@@ -49,14 +50,15 @@ function App() {
         massege={["tarible", "bad", "okay", "good", "better"]}
         defaultRating={3}
       /> */}
-      <div>
+      {/* <div>
         <RatingStars color="#67ee22" setMovieRating={setMovieRating} />
         {movieRating ? (
           <p>Movie was rated {movieRating ? movieRating : ""} </p>
         ) : (
           "Please rate the movie"
         )}
-      </div>
+      </div> */}
+      <ShowMore />
     </div>
   );
 }
