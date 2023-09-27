@@ -1,11 +1,19 @@
 import React, { useState } from "react";
 
-function RatingStars({ maxLength = 10 }) {
-  const [rating, setRaing] = useState(0);
+function RatingStars({
+  maxLength = 10,
+  className,
+  color,
+  massege = [],
+  defaultRating = 0,
+  setMovieRating,
+}) {
+  const [rating, setRaing] = useState(defaultRating);
   const [tempRating, setTempRating] = useState(0);
 
   function handleRating(rate) {
     setRaing(rate);
+    setMovieRating(rate);
   }
 
   return (
@@ -13,6 +21,8 @@ function RatingStars({ maxLength = 10 }) {
       <div className="flex">
         {Array.from({ length: maxLength }, (_, i) => (
           <Star
+            color={color}
+            className={className}
             key={i}
             onClick={() => handleRating(i + 1)}
             onMouseEnter={() => setTempRating(i + 1)}
@@ -21,26 +31,30 @@ function RatingStars({ maxLength = 10 }) {
           />
         ))}
       </div>
-      <p>{tempRating || rating || ""}</p>
+      <p>
+        {massege.length === maxLength
+          ? massege[tempRating ? tempRating - 1 : rating - 1]
+          : tempRating || rating || "Please rate"}
+      </p>
     </div>
   );
 }
 
-function Star({ onClick, onMouseEnter, onMouseLeave, full }) {
+function Star({ onClick, onMouseEnter, onMouseLeave, full, className, color }) {
   return (
     <div
       onClick={onClick}
       onMouseLeave={onMouseLeave}
       onMouseEnter={onMouseEnter}
-      className="w-6 cursor-pointer"
+      className={`${className} w-6 cursor-pointer `}
     >
       {full ? (
         <span className="">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
-            fill="#000"
-            stroke="#000"
+            fill={color}
+            stroke={color}
           >
             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
           </svg>
@@ -51,7 +65,7 @@ function Star({ onClick, onMouseEnter, onMouseLeave, full }) {
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke="#000"
+            stroke={color}
           >
             <path
               strokeLinecap="round"
