@@ -12,6 +12,7 @@ import ToDoList from "./toDoList/ToDoList";
 import RatingStars from "./components/ratingStars/RatingStars";
 import { useState } from "react";
 import ShowMore from "./components/showMore/ShowMore";
+import UseEffectHook from "./hooks/UseEffectHook";
 
 function App() {
   const [movieRating, setMovieRating] = useState(null);
@@ -58,7 +59,8 @@ function App() {
           "Please rate the movie"
         )}
       </div> */}
-      <ShowMore />
+      {/* <ShowMore /> */}
+      <UseEffectHook />
     </div>
   );
 }
